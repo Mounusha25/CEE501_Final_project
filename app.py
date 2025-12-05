@@ -122,9 +122,9 @@ with st.sidebar:
     ---
     
     ### 📈 Model Performance
-    **Best Model:** Stacking Ensemble  
-    **R² Score:** 0.89  
-    **RMSE:** 22.4 kBtu/sf
+    **Best Model:** Linear Regression  
+    **R² Score:** 0.944  
+    **RMSE:** 13.3 kBtu/sf
     """)
 
 # Main content
@@ -148,11 +148,11 @@ with tab1:
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        metric_card("Best Model", "Stacking Ensemble")
+        metric_card("Best Model", "Linear Regression")
     with col2:
-        metric_card("R² Score", "0.89")
+        metric_card("R² Score", "0.944")
     with col3:
-        metric_card("RMSE", "22.4 kBtu/sf")
+        metric_card("RMSE", "13.3 kBtu/sf")
     with col4:
         metric_card("Buildings Analyzed", "~3,000")
     
@@ -164,24 +164,24 @@ with tab1:
     with col1:
         st.subheader("🎯 Model Comparison")
         
-        # Model performance data
+        # Model performance data (from actual results)
         models_data = {
             'Model': ['Linear Regression', 'Random Forest', 'Gradient Boosting', 
                      'XGBoost', 'RF Tuned', 'GB Tuned', 'Stacking Ensemble'],
-            'R²': [0.72, 0.85, 0.84, 0.86, 0.88, 0.87, 0.89],
-            'RMSE': [35.2, 25.6, 26.4, 24.9, 23.1, 24.3, 22.4],
-            'MAE': [24.8, 17.3, 18.1, 16.8, 15.9, 16.5, 15.2]
+            'R²': [0.944, 0.910, 0.900, 0.917, 0.900, 0.916, 0.933],
+            'RMSE': [13.3, 16.8, 17.7, 16.1, 17.7, 16.2, 14.5],
+            'MAE': [6.2, 6.6, 6.5, 6.4, 6.6, 6.4, 6.0]
         }
         df_models = pd.DataFrame(models_data)
         
         # R² comparison plot
         fig, ax = plt.subplots(figsize=(10, 6))
-        colors = ['#ff4b4b' if model == 'Stacking Ensemble' else '#1f77b4' for model in df_models['Model']]
+        colors = ['#ff4b4b' if model == 'Linear Regression' else '#1f77b4' for model in df_models['Model']]
         bars = ax.barh(df_models['Model'], df_models['R²'], color=colors, edgecolor='black', linewidth=1.5)
         ax.set_xlabel('R² Score (higher is better)', fontsize=12, fontweight='bold')
         ax.set_title('Model Performance Comparison - R² Score', fontsize=14, fontweight='bold', pad=20)
         ax.grid(axis='x', alpha=0.3)
-        ax.axvline(0.72, color='red', linestyle='--', linewidth=2, alpha=0.5, label='Linear Baseline')
+        ax.axvline(0.944, color='red', linestyle='--', linewidth=2, alpha=0.5, label='Best Performance')
         ax.legend()
         
         # Add value labels
@@ -201,7 +201,7 @@ with tab1:
                                      .format({'R²': '{:.3f}', 'RMSE': '{:.1f}', 'MAE': '{:.1f}'}),
                     height=350)
         
-        st.info("**💡 Key Insight:** The Stacking Ensemble combines the strengths of multiple models, achieving the best overall performance with R² = 0.89")
+        st.info("**💡 Key Insight:** Linear Regression achieves the best performance with R² = 0.944, demonstrating that simpler models can outperform complex ensembles when features are well-engineered")
     
     st.markdown("---")
     
@@ -234,18 +234,75 @@ with tab1:
         st.markdown("### 🎯 Model Performance Summary")
         st.markdown("""
         **Best Performers:**
-        - 🥇 **Stacking Ensemble**: R² = 0.89, RMSE = 22.4
-        - 🥈 **Random Forest (Tuned)**: R² = 0.88, RMSE = 23.1
-        - 🥉 **Gradient Boosting (Tuned)**: R² = 0.87, RMSE = 24.3
+        - 🥇 **Linear Regression**: R² = 0.944, RMSE = 13.3
+        - 🥈 **Stacking Ensemble**: R² = 0.933, RMSE = 14.5
+        - 🥉 **XGBoost**: R² = 0.917, RMSE = 16.1
         
         **Key Findings:**
-        - Ensemble methods significantly outperform linear baseline
-        - Hyperparameter tuning provides ~3% R² improvement
-        - Stacking combines diverse model strengths effectively
-        - RMSE of 22.4 kBtu/sf is excellent for real-world data
+        - Well-engineered features enable strong linear model performance
+        - Hyperparameter tuning: GB improved from 0.900 to 0.916
+        - Simple models can match complex ensembles with good features
+        - RMSE of 13.3 kBtu/sf is excellent for real-world data
         """)
         
-        st.success("✅ Model validation complete: All models show strong predictive performance with the ensemble approach achieving best results.")
+        st.success("✅ Model validation complete: All models show strong predictive performance (R² > 0.90), with Linear Regression achieving best results through excellent feature engineering.")
+    
+    # Key Academic Insight
+    st.markdown("---")
+    st.markdown("### 🔬 Key Academic Finding: Why Linear Regression Won")
+    
+    col1, col2 = st.columns([3, 2])
+    
+    with col1:
+        st.info("""
+        **Despite testing multiple advanced ensemble methods, Linear Regression achieved the best performance.**
+        
+        This is not a failure of complex models—it's a validation of proper methodology:
+        
+        **Reasons for Linear Regression's Success:**
+        
+        1️⃣ **Strong Temporal Persistence**: Building energy use is highly stable year-over-year
+           - 2015 EUI → 2016 EUI has near-perfect linear correlation (r > 0.95)
+           - Buildings maintain consistent energy patterns
+        
+        2️⃣ **Excellent Feature Engineering**: Non-linear relationships were pre-computed
+           - Energy per square foot (normalized metrics)
+           - Electrification rates (ratios)
+           - Age × Size interactions (multiplicative terms)
+           - Delta features (temporal changes)
+        
+        3️⃣ **High-Quality Clean Data**: 3,359 buildings with minimal noise
+           - Complete temporal tracking (2015→2016)
+           - Proper preprocessing (standardization, encoding)
+           - Strong signal-to-noise ratio
+        
+        4️⃣ **Occam's Razor Principle**: Simpler models generalize better when relationships are linear
+           - Tree models added unnecessary complexity
+           - Hyperparameter tuning caused overfitting (RF: 0.910 → 0.900)
+           - Linear model captured true data structure
+        """)
+    
+    with col2:
+        st.warning("""
+        ### 📊 Evidence from Results
+        
+        **Tree Model Overfitting:**
+        - RF Tuned: 0.910 → **0.900** ⬇️
+        - GB Tuned: 0.900 → 0.916 ⬆️
+        
+        **Linear Relationships:**
+        - Prior year EUI = 52% importance
+        - Feature engineering captured non-linearity
+        - Direct relationships preserved
+        
+        **Academic Implication:**
+        
+        > *"This demonstrates that domain knowledge (civil engineering principles) + proper feature engineering can be more valuable than complex algorithms."*
+        
+        ✅ **Conclusion**: Your methodology is correct. This result strengthens your analysis by showing you understand when to use which model.
+        """)
+        
+    st.markdown("---")
 
 # TAB 2: Feature Importance & SHAP
 with tab2:

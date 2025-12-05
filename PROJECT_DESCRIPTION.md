@@ -1,17 +1,17 @@
 # Building Energy Performance ML Pipeline - Project Description
 
-## 🎯 What We're Doing
+## What We're Doing
 
 We built a **graduate-level machine learning system** that predicts building energy performance and helps Seattle comply with Building Energy Performance Standards (BEPS).
 
-## 🏢 The Real-World Problem
+## The Real-World Problem
 
 Seattle requires commercial buildings to meet energy efficiency targets by **2030** and **2040**. Building owners need to know:
 - Will my building comply?
 - How much will retrofits cost?
 - Which buildings are highest risk?
 
-## 🤖 Our Solution
+## Our Solution
 
 A **comprehensive 26-phase ML pipeline** that:
 
@@ -36,7 +36,7 @@ A **comprehensive 26-phase ML pipeline** that:
 - 95% CI coverage: 93.5% (well-calibrated)
 - Mean prediction interval: ±15 kBtu/sf
 
-## 🔬 Technical Highlights
+## Technical Highlights
 
 ### **Models Used**
 1. **Linear Regression** (baseline)
@@ -66,7 +66,7 @@ A **comprehensive 26-phase ML pipeline** that:
   3. Energy-intensive (large, high EUI)
   4. Underperformers (need retrofits)
 
-## 📊 Key Results
+## Key Results
 
 | Metric | Value |
 |--------|-------|
@@ -75,7 +75,7 @@ A **comprehensive 26-phase ML pipeline** that:
 | **MAE** | 15.2 kBtu/sf |
 | **Top Feature** | Prior year EUI (52% importance) |
 
-### **Optimization Impact** ⭐ NEW
+### **Optimization Impact** NEW
 - **Random Forest:** R² improved from 0.87 to 0.88 (+1.2%)
 - **Gradient Boosting:** R² improved from 0.86 to 0.87 (+1.1%)
 - **Best Optimized Model:** Stacking Ensemble (R²=0.89, RMSE=22.4)
@@ -92,31 +92,31 @@ A **comprehensive 26-phase ML pipeline** that:
 - **Need Retrofits:** 60% of buildings (1,800)
 - **More stringent targets require deeper interventions**
 
-## 🎓 Graduate-Level Enhancements
+## Graduate-Level Enhancements
 
 We elevated this from a standard ML project to graduate-level by adding:
 
-1. **✅ Model Interpretability (SHAP)**
+1. **Model Interpretability (SHAP)**
    - SHAP TreeExplainer for transparent predictions
    - Beeswarm & bar plots for stakeholder communication
 
-2. **✅ Robust Cross-Validation**
+2. **Robust Cross-Validation**
    - 5-fold CV with statistical reporting (mean ± std)
    - Multiple metrics (R², RMSE, MAE)
 
-3. **✅ Residual Analysis**
+3. **Residual Analysis**
    - 6 diagnostic plots
    - Validates assumptions (normality, homoscedasticity)
 
-4. **✅ Policy Impact Analysis**
+4. **Policy Impact Analysis**
    - Real-world BEPS compliance forecasting
    - Economic & environmental impact quantification
 
-5. **✅ Uncertainty Quantification**
+5. **Uncertainty Quantification**
    - Bootstrap confidence intervals
    - 100 resamples for robust uncertainty estimates
 
-## 💡 Why This Matters
+## Why This Matters
 
 ### **For Building Owners:**
 - **Proactive planning:** Know 5-10 years in advance if retrofits are needed
@@ -133,7 +133,7 @@ We elevated this from a standard ML project to graduate-level by adding:
 - **Reproducible science:** Complete pipeline from raw data to policy insights
 - **Extensible:** Can be applied to other cities/regions
 
-## 🚀 How It Works (Simplified)
+## How It Works (Simplified)
 
 ```
 STEP 1: Load Data
@@ -158,19 +158,19 @@ STEP 7: Generate Insights
   └─> Reports, visualizations, recommendations
 ```
 
-## 📈 Model Performance Progression
+## Model Performance Progression
 
 ```
-Linear Regression:  R² = 0.72  ❌ Underfits
-Random Forest:      R² = 0.85  ✅ Good
-Gradient Boosting:  R² = 0.84  ✅ Good
-XGBoost:            R² = 0.86  ✅ Better
-RF Tuned:           R² = 0.88  ✅✅ Great
-GB Tuned:           R² = 0.87  ✅✅ Great
-Stacking Ensemble:  R² = 0.89  ✅✅✅ BEST
+Linear Regression:  R² = 0.72  Underfits
+Random Forest:      R² = 0.85  Good
+Gradient Boosting:  R² = 0.84  Good
+XGBoost:            R² = 0.86  Better
+RF Tuned:           R² = 0.88  Great
+GB Tuned:           R² = 0.87  Great
+Stacking Ensemble:  R² = 0.89  BEST
 ```
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ```python
 Python 3.8+
@@ -183,7 +183,7 @@ Python 3.8+
 └── jupyter (interactive development)
 ```
 
-## 📁 Deliverables
+## Deliverables
 
 1. **ML_Pipeline_Complete.ipynb** (118 cells, fully documented)
 2. **README.md** (comprehensive documentation)
@@ -192,24 +192,24 @@ Python 3.8+
 5. **Visualizations:** 15+ publication-quality plots
 6. **Reports:** High-risk buildings, model performance, BEPS forecasts
 
-## ⏱️ Execution Time
+## Execution Time
 
 - **Full Pipeline:** ~6 minutes on modern laptop
 - **Individual Phases:** Seconds to 2 minutes each
 - **Bottlenecks:** Bootstrap CI (1-2 min), Hyperparameter tuning (2-3 min)
 
-## 🎯 Project Goals Achieved
+## Project Goals Achieved
 
-✅ **Accurate Predictions:** R² = 0.89 (excellent for real-world data)  
-✅ **Model Interpretability:** SHAP makes black-box models transparent  
-✅ **Robust Validation:** Cross-validation + residual diagnostics  
-✅ **Policy Relevance:** Direct application to Seattle BEPS ordinance  
-✅ **Uncertainty Quantification:** Bootstrap CI for decision-making confidence  
-✅ **Graduate-Level Quality:** 5 advanced enhancements implemented  
-✅ **Reproducibility:** Complete, documented pipeline from data to insights  
-✅ **Real-World Impact:** Actionable recommendations for stakeholders  
+**Accurate Predictions:** R² = 0.89 (excellent for real-world data)  
+**Model Interpretability:** SHAP makes black-box models transparent  
+**Robust Validation:** Cross-validation + residual diagnostics  
+**Policy Relevance:** Direct application to Seattle BEPS ordinance  
+**Uncertainty Quantification:** Bootstrap CI for decision-making confidence  
+**Graduate-Level Quality:** 5 advanced enhancements implemented  
+**Reproducibility:** Complete, documented pipeline from data to insights  
+**Real-World Impact:** Actionable recommendations for stakeholders  
 
-## 🏆 Final Assessment
+## Final Assessment
 
 This project demonstrates:
 - **Technical mastery:** Advanced ML techniques properly applied
@@ -218,12 +218,11 @@ This project demonstrates:
 - **Communication:** Clear visualizations & stakeholder-focused insights
 - **Production quality:** Clean code, documentation, reproducibility
 
-**Grade Potential:** 10/10 (from initial 8.5/10 baseline)
 
 ---
 
 **Last Updated:** December 4, 2024  
-**Status:** ✅ Complete & Ready for Submission  
+**Status:** Complete & Ready for Submission  
 **Runtime:** ~6 minutes  
 **Lines of Code:** 2,608 in notebook  
 **Visualizations:** 15+  

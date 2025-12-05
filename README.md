@@ -1,4 +1,4 @@
-# 🏢 Building Energy Performance Prediction & BEPS Compliance Analysis
+# Building Energy Performance Prediction & BEPS Compliance Analysis
 
 **CEE 501 Final Project: Seattle Building Energy Benchmarking using ML **
 
@@ -6,7 +6,7 @@ A comprehensive machine learning system for predicting building energy performan
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Data Description](#data-description)
@@ -20,7 +20,7 @@ A comprehensive machine learning system for predicting building energy performan
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 ### **Problem Statement**
 Commercial buildings in Seattle must comply with increasingly stringent Building Energy Performance Standards (BEPS), with targets set for 2030 and 2040. Building owners and city planners need:
@@ -43,7 +43,7 @@ A sophisticated ML pipeline that:
 
 ---
 
-## 📊 Data Description
+## Data Description
 
 ### **Datasets**
 - **Source:** Seattle Building Energy Benchmarking Data (2015-2016)
@@ -68,7 +68,7 @@ A sophisticated ML pipeline that:
 
 ---
 
-## 🏗️ Pipeline Architecture
+## Pipeline Architecture
 
 ### **26-Phase Comprehensive Pipeline**
 
@@ -177,24 +177,24 @@ A sophisticated ML pipeline that:
 
 ---
 
-## 🚀 Key Features & Innovations
+## Key Features & Innovations
 
 ### **1. Machine Learning Enhancements**
 
-#### **🔍 A. SHAP Interpretability**
+#### **A. SHAP Interpretability**
 - **TreeExplainer** for Random Forest model
 - Global feature importance rankings
 - Individual prediction explanations
 - Beeswarm plots showing feature impact distribution
 - **Impact:** Makes black-box models transparent for stakeholders
 
-#### **📊 B. Cross-Validation Model Comparison**
+#### **B. Cross-Validation Model Comparison**
 - 5-fold stratified cross-validation for all 4 models
 - Metrics: R², RMSE, MAE with mean ± std dev
 - Robust performance estimates avoiding overfitting
 - **Best Model:** Random Forest (R² = 0.85±0.02)
 
-#### **📈 C. Residual Analysis**
+#### **C. Residual Analysis**
 - 6 comprehensive diagnostic plots:
   1. Residuals vs Fitted Values (heteroscedasticity check)
   2. Q-Q Plot (normality assumption)
@@ -204,7 +204,7 @@ A sophisticated ML pipeline that:
   6. Percentage error distribution
 - **Findings:** Model satisfies linear regression assumptions, minimal bias
 
-#### **🏛️ D. Policy Impact Quantification**
+#### **D. Policy Impact Quantification**
 - **BEPS Compliance Forecasting:**
   - 2030 targets: 65/55/70 kBtu/sf (Non-Res/Multifamily/Campus)
   - 2040 targets: 50/45/55 kBtu/sf
@@ -217,7 +217,7 @@ A sophisticated ML pipeline that:
   - Estimated GHG reduction: XX,000 metric tons CO2e/year
   - Equivalent to removing XX,000 cars from roads
 
-#### **🎲 E. Bootstrap Confidence Intervals**
+#### **E. Bootstrap Confidence Intervals**
 - 100 bootstrap resamples for prediction uncertainty
 - 95% confidence intervals for all forecasts
 - Coverage: 93.5% (well-calibrated)
@@ -272,7 +272,7 @@ A sophisticated ML pipeline that:
 
 ---
 
-## 🛠️ Technical Implementation
+## Technical Implementation
 
 ### **Technology Stack**
 ```python
@@ -389,7 +389,7 @@ XGBRegressor(
 
 ---
 
-## 💻 Installation & Usage
+## Installation & Usage
 
 ### **Prerequisites**
 ```bash
