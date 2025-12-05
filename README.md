@@ -1,6 +1,6 @@
 # 🏢 Building Energy Performance Prediction & BEPS Compliance Analysis
 
-**CEE 501 Final Project - Graduate-Level Machine Learning Pipeline**
+**CEE 501 Final Project: Seattle Building Energy Benchmarking using ML- **
 
 A comprehensive machine learning system for predicting building energy performance, identifying high-risk buildings, and quantifying policy impacts for Seattle's Building Energy Performance Standards (BEPS).
 
@@ -405,7 +405,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
 
 ### **Running the Analysis**
 
-#### **Option 1: Interactive Streamlit Dashboard ⭐ NEW!**
+#### **Option 1: Interactive Streamlit Dashboard**
 ```bash
 # Install Streamlit dependencies
 pip install -r requirements_streamlit.txt
@@ -459,7 +459,7 @@ CEE501_final_project/
 ├── requirements.txt                             # Python dependencies
 ├── requirements_streamlit.txt                   # Streamlit dependencies
 │
-├── 🎨 Dashboard (NEW!)
+├── Dashboard
 │   ├── app.py                                  # Main Streamlit dashboard
 │   ├── STREAMLIT_GUIDE.md                      # Dashboard user guide
 │   └── run_dashboard.sh                        # Quick launcher script
@@ -496,156 +496,20 @@ CEE501_final_project/
 
 ---
 
-## 🎓 Academic Contributions
 
-### **Graduate-Level Enhancements Applied**
+## 📧 Contact
 
-1. **✅ Cross-Validation with Statistical Rigor**
-   - 5-fold CV with mean ± standard deviation reporting
-   - Multiple scoring metrics (R², RMSE, MAE)
-   - Model stability assessment
-
-2. **✅ Model Interpretability (SHAP)**
-   - SHAP TreeExplainer for Random Forest
-   - Global & local feature importance
-   - Visualizations for stakeholder communication
-
-3. **✅ Residual Diagnostics**
-   - 6-plot diagnostic suite
-   - Assumption validation (normality, homoscedasticity)
-   - Outlier detection & leverage analysis
-
-4. **✅ Policy Impact Quantification**
-   - BEPS compliance forecasting
-   - Economic analysis (costs, savings, payback)
-   - Environmental impact (GHG emissions)
-   - High-risk building identification
-
-5. **✅ Uncertainty Quantification (Bootstrap CI)**
-   - 100 bootstrap resamples
-   - 95% confidence intervals for predictions
-   - Coverage statistics & calibration assessment
-
-### **Novel Contributions**
-
-1. **Temporal Feature Engineering**
-   - Year-over-year change features
-   - Trajectory classification (improving/worsening/stable)
-   - Physics-based interaction terms
-
-2. **Multi-Task Learning Framework**
-   - Regression: EUI prediction
-   - Binary classification: Energy Star achievement
-   - Multi-class: Trajectory forecasting
-   - Clustering: Building archetypes
-
-3. **Ensemble Stacking Approach**
-   - Combines diverse models (RF, GB, LR)
-   - Ridge meta-learner for optimal weighting
-   - Achieves best overall performance (R² = 0.89)
-
-4. **Real-World Policy Application**
-   - Direct application to Seattle BEPS ordinance
-   - Actionable insights for building owners & policymakers
-   - Economic feasibility analysis for retrofits
-
----
-
-## 📊 Key Insights & Recommendations
-
-### **For Building Owners**
-1. **Monitor YoY trends:** Buildings with improving EUI trends are less likely to need retrofits
-2. **Focus on energy mix:** Electrification can improve Energy Star Scores
-3. **Size matters:** Larger buildings face higher absolute retrofit costs but better economies of scale
-4. **Plan ahead:** 2030 is approaching—start retrofit planning now for 10-18 year payback periods
-
-### **For Policymakers**
-1. **40% of buildings** need intervention by 2030—significant policy & financial support required
-2. **High-risk buildings identified:** Prioritize outreach & incentive programs
-3. **Retrofit investment:** \$75M-\$450M needed (2030), \$110M-\$660M (2040)
-4. **Economic opportunity:** Annual energy savings of \$XX million create positive ROI
-
-### **For Researchers**
-1. **Model performance:** Ensemble methods outperform individual models (0.89 vs 0.85 R²)
-2. **Feature importance:** Prior year EUI is dominant predictor (52%)—supports "buildings are persistent"
-3. **Uncertainty quantification:** Bootstrap CI provides realistic forecast ranges
-4. **Temporal dynamics:** Linear trajectory extrapolation is reasonable for 5-year horizons
-
----
-
-## 🚧 Future Work & Extensions
-
-### **Short-Term Improvements**
-1. **Add more temporal data:** Incorporate 2017-2024 data for richer trend analysis
-2. **Weather integration:** Include actual weather data (heating/cooling degree days)
-3. **Economic modeling:** Refine retrofit cost estimates with building-specific data
-4. **Interactive dashboard:** Build Streamlit/Dash app for stakeholder exploration
-
-### **Long-Term Research Directions**
-1. **Deep learning models:** LSTM/Transformer for time series forecasting
-2. **Causal inference:** Estimate causal impact of specific retrofits (DiD, IV)
-3. **Spatial analysis:** Incorporate geographic clustering & neighborhood effects
-4. **Optimization framework:** Multi-objective optimization for cost-efficiency-emissions tradeoff
-5. **Transfer learning:** Apply model to other cities (Portland, San Francisco)
-
----
-
-## 📝 Citation
-
-If you use this work in academic research, please cite:
-
-```bibtex
-@misc{cee501_building_energy_2024,
-  title={Building Energy Performance Prediction and BEPS Compliance Analysis},
-  author={[Your Name]},
-  year={2024},
-  institution={University of Washington},
-  course={CEE 501: Data Science for Built Environment},
-  howpublished={\url{https://github.com/yourusername/CEE501_final_project}}
-}
-```
-
----
-
-## 📧 Contact & Support
-
-- **Author:** [Your Name]
-- **Email:** [your.email@uw.edu]
+- **Author:** Mounusha Metti, Kashish Patel
+- **Email:** mmetti@asu.edu, kbpate10@asu.edu
 - **Course:** CEE 501 - Data Science for Built Environment
-- **Institution:** University of Washington
-- **Term:** Fall 2024
+- **Institution:** Arizona State University
+- **Term:** Fall 2025
 
-For questions, issues, or collaboration inquiries, please open an issue on GitHub or contact via email.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See `LICENSE` file for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
 - **Data Source:** City of Seattle Open Data Portal
-- **Course Instructor:** [Professor Name]
 - **Libraries:** scikit-learn, XGBoost, SHAP, pandas, matplotlib
 - **Inspiration:** Seattle's Climate Action Plan & BEPS Ordinance
-
----
-
-## 📌 Project Status
-
-**Status:** ✅ Complete (All 18 phases implemented & validated)
-
-**Last Updated:** December 4, 2024
-
-**Notebook Execution:** All 117 cells execute successfully (runtime ~6 minutes)
-
-**Model Performance:** Stacking Ensemble R² = 0.89, RMSE = 22.4 kBtu/sf
-
-**Ready for:** Academic submission, portfolio showcase, stakeholder presentation
-
----
-
-**🎉 Project successfully delivers a graduate-level, production-ready ML pipeline for building energy prediction and policy analysis!**
