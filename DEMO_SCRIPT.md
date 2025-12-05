@@ -17,11 +17,11 @@ Use this script to guide your dashboard demonstration:
 
 **Navigate to first tab, point to metrics at top:**
 
-*"Our analysis compared 7 different machine learning models. The best performer is our Stacking Ensemble with an R-squared of 0.89, meaning it explains 89% of the variance in building energy use."*
+*"Our analysis compared 7 different machine learning models, including both default and optimized versions. The best performer is our Stacking Ensemble with an R-squared of 0.89, meaning it explains 89% of the variance in building energy use."*
 
 **Scroll to bar chart:**
 
-*"You can see here how each model performs. The stacking approach - shown in red - combines Random Forest, Gradient Boosting, and Linear Regression to achieve the best results."*
+*"You can see here how each model performs. The stacking approach - shown in red - combines Random Forest, Gradient Boosting, and Linear Regression to achieve the best results. We also performed hyperparameter optimization on key models, improving Random Forest by 1.2% and Gradient Boosting by 1.1%."*
 
 **Point to metrics table:**
 

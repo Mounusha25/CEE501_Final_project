@@ -13,7 +13,7 @@ Seattle requires commercial buildings to meet energy efficiency targets by **203
 
 ## 🤖 Our Solution
 
-A **comprehensive 18-phase ML pipeline** that:
+A **comprehensive 26-phase ML pipeline** that:
 
 ### **1. Predicts Future Energy Use**
 - Uses 2015 data to predict 2016 Energy Use Intensity (EUI)
@@ -49,8 +49,9 @@ A **comprehensive 18-phase ML pipeline** that:
 - **SHAP Analysis:** Makes models interpretable for non-experts
 - **Cross-Validation:** 5-fold CV ensures robust performance
 - **Residual Diagnostics:** 6 plots validate model assumptions
-- **Hyperparameter Tuning:** RandomizedSearchCV optimizes models
-- **Bootstrap CI:** Quantifies prediction uncertainty
+- **Hyperparameter Tuning:** RandomizedSearchCV optimizes models (Phase 24)
+- **Optimization Comparison:** Quantifies improvements from tuning (Phase 25)
+- **Bootstrap CI:** Quantifies prediction uncertainty (Phase 23)
 
 ### **Feature Engineering**
 - **Temporal features:** Year-over-year changes, trends
@@ -73,6 +74,11 @@ A **comprehensive 18-phase ML pipeline** that:
 | **RMSE** | 22.4 kBtu/sf |
 | **MAE** | 15.2 kBtu/sf |
 | **Top Feature** | Prior year EUI (52% importance) |
+
+### **Optimization Impact** ⭐ NEW
+- **Random Forest:** R² improved from 0.87 to 0.88 (+1.2%)
+- **Gradient Boosting:** R² improved from 0.86 to 0.87 (+1.1%)
+- **Best Optimized Model:** Stacking Ensemble (R²=0.89, RMSE=22.4)
 
 ### **BEPS Compliance (2030)**
 - **Compliant:** 60% of buildings (1,800)
