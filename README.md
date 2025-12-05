@@ -1,6 +1,6 @@
 # 🏢 Building Energy Performance Prediction & BEPS Compliance Analysis
 
-**CEE 501 Final Project: Seattle Building Energy Benchmarking using ML- **
+**CEE 501 Final Project: Seattle Building Energy Benchmarking using ML **
 
 A comprehensive machine learning system for predicting building energy performance, identifying high-risk buildings, and quantifying policy impacts for Seattle's Building Energy Performance Standards (BEPS).
 
@@ -162,7 +162,7 @@ A sophisticated ML pipeline that:
 
 ## 🚀 Key Features & Innovations
 
-### **1. Graduate-Level Enhancements**
+### **1. Machine Learning Enhancements**
 
 #### **🔍 A. SHAP Interpretability**
 - **TreeExplainer** for Random Forest model
