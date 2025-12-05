@@ -405,20 +405,43 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
 
 ### **Running the Analysis**
 
-#### **Option 1: Run Jupyter Notebook**
+#### **Option 1: Interactive Streamlit Dashboard ⭐ NEW!**
+```bash
+# Install Streamlit dependencies
+pip install -r requirements_streamlit.txt
+
+# Launch dashboard
+streamlit run app.py
+
+# Or use the launcher script
+./run_dashboard.sh
+```
+Opens interactive 5-page dashboard at `http://localhost:8501`
+
+**Dashboard Features:**
+- 📊 Model performance comparison with interactive charts
+- 🔍 Feature importance & SHAP analysis
+- 📈 BEPS compliance forecasts & economic impact
+- 🏢 **Interactive risk calculator** - try different building scenarios!
+- 📉 Model diagnostics & validation
+
+See `STREAMLIT_GUIDE.md` for detailed instructions.
+
+#### **Option 2: Run Jupyter Notebook**
 ```bash
 jupyter notebook ML_Pipeline_Complete.ipynb
 ```
 Then: `Kernel → Restart & Run All`
 
-#### **Option 2: Execute as Python Script**
+#### **Option 3: Execute as Python Script**
 ```bash
 jupyter nbconvert --to script ML_Pipeline_Complete.ipynb
 python ML_Pipeline_Complete.py
 ```
 
 ### **Expected Runtime**
-- Full pipeline: ~5-7 minutes on a modern laptop
+- **Streamlit Dashboard**: < 5 seconds startup
+- **Full notebook pipeline**: ~5-7 minutes on a modern laptop
 - Bottlenecks:
   - Bootstrap CI: ~1-2 minutes (100 iterations)
   - Hyperparameter tuning: ~2-3 minutes (RandomizedSearchCV)
@@ -432,7 +455,14 @@ python ML_Pipeline_Complete.py
 CEE501_final_project/
 │
 ├── README.md                                    # This file
+├── PROJECT_DESCRIPTION.md                       # Executive summary
 ├── requirements.txt                             # Python dependencies
+├── requirements_streamlit.txt                   # Streamlit dependencies
+│
+├── 🎨 Dashboard (NEW!)
+│   ├── app.py                                  # Main Streamlit dashboard
+│   ├── STREAMLIT_GUIDE.md                      # Dashboard user guide
+│   └── run_dashboard.sh                        # Quick launcher script
 │
 ├── Data/
 │   ├── 2015-building-energy-benchmarking.csv   # 2015 building data
