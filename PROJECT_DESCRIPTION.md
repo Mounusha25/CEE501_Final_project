@@ -2,7 +2,7 @@
 
 ## What We're Doing
 
-We built a **graduate-level machine learning system** that predicts building energy performance and helps Seattle comply with Building Energy Performance Standards (BEPS).
+We built a **Machine learning system** that predicts building energy performance and helps Seattle comply with Building Energy Performance Standards (BEPS).
 
 ## The Real-World Problem
 
