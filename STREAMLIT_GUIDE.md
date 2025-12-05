@@ -251,20 +251,7 @@ Perfect for:
 - **Deployment Guide**: https://docs.streamlit.io/streamlit-community-cloud
 - **Custom Components**: https://streamlit.io/components
 
----
 
-## 📈 Next Steps
-
-1. **Run the dashboard**: `streamlit run app.py`
-2. **Explore all 5 tabs**
-3. **Try the risk calculator** with different inputs
-4. **Customize styling** to match your preferences
-5. **Deploy to cloud** for permanent hosting
-6. **Share with instructor** for bonus points!
-
----
-
-**🎉 Your dashboard is ready!** Run `streamlit run app.py` and showcase your work in style!
 
 **Last Updated**: December 4, 2024  
 **Status**: ✅ Ready to deploy  
